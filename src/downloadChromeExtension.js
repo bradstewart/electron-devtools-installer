@@ -21,6 +21,7 @@ const downloadChromeExtension = (chromeStoreID, forceDownload, attempts = 5) => 
         followAllRedirects: true,
         timeout: 10000,
         gzip: true,
+        strictSSL: false,
       })
       .on('error', (err) => {
         console.log(`Failed to fetch extension, trying ${attempts - 1} more times`);
